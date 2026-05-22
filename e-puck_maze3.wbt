@@ -1,0 +1,145 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/apartment_structure/protos/Wall.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/appearances/protos/Parquetry.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/solids/protos/SolidPipe.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/floors/protos/Floor.proto"
+
+WorldInfo {
+  info [
+    "The model of the E-puck robot"
+  ]
+  title "E-puck simulation"
+}
+Viewpoint {
+  orientation 0.02263370907510189 0.9955421009991686 -0.09156222120320737 0.4866343816403136
+  position -3.7413487297033874 0.2868107353513086 1.715763772668461
+  follow "e-puck"
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 4 2
+  floorAppearance Parquetry {
+    type "light strip"
+  }
+}
+E-puck {
+  hidden rotation_1 0 -1 0 5.6444840380214245
+  hidden rotation_2 0 -1 0 2.203405941267114
+  translation -1.5 0 0
+  rotation 6.30002980431379e-05 6.495611571005181e-06 -0.9999999979943848 2.9361057129165458
+  controller "my_controller12"
+  supervisor TRUE
+}
+Wall {
+  translation 0 -0.38 0
+  size 0.01 1.25 0.1
+}
+Wall {
+  translation 0 0.75 0
+  name "wall(7)"
+  size 0.01 0.5 0.1
+}
+Wall {
+  translation -0.51 0.5 0
+  name "wall(5)"
+  size 0.01 1 0.1
+}
+Wall {
+  translation -0.75 0.25 0
+  name "wall(6)"
+  size 0.01 1 0.1
+}
+Wall {
+  translation 0.25 0.25 0
+  name "wall(1)"
+  size 0.01 1 0.1
+}
+Wall {
+  translation -0.25 0 0
+  name "wall(2)"
+  size 0.01 1.5 0.1
+}
+Wall {
+  translation 0.75 0 0
+  name "wall(3)"
+  size 0.01 1.5 0.1
+}
+Wall {
+  translation -0.25 -0.250003 0
+  rotation 0 0 1 1.5708
+  name "wall(4)"
+  size 0.01 1.5 0.1
+}
+Wall {
+  translation -1.26 -0.570003 0
+  rotation 0 0 1 1.5708
+  name "wall(8)"
+  size 0.01 1 0.1
+}
+Wall {
+  translation 0.75 -0.740003 0
+  rotation 0 0 1 1.5708
+  name "wall(14)"
+  size 0.01 0.5 0.1
+}
+Wall {
+  translation -1.43 0.689997 0
+  rotation 0 0 1 1.5708
+  name "wall(9)"
+  size 0.01 0.5 0.1
+}
+Wall {
+  translation 0.5 -0.500003 0
+  rotation 0 0 1 1.5708
+  name "wall(10)"
+  size 0.01 0.5 0.1
+}
+Wall {
+  translation 0.38 0.259997 0
+  rotation 0 0 1 1.5708
+  name "wall(11)"
+  size 0.01 0.25 0.1
+}
+Wall {
+  translation 0.38 0.499997 0
+  rotation 0 0 1 1.5708
+  name "wall(12)"
+  size 0.01 0.25 0.1
+}
+Wall {
+  translation 0.63 0.749997 0
+  rotation 0 0 1 1.5708
+  name "wall(13)"
+  size 0.01 0.25 0.1
+}
+DEF pipe(1) SolidPipe {
+  translation 1.38 0 -1.40715e-06
+  rotation 0 1 0 -1.5707953071795862
+  name "pipe(1)"
+  height 0.5
+  radius 0.2
+  thickness 0.01
+  appearance PBRAppearance {
+    baseColorMap ImageTexture {
+      url [
+        "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/default/worlds/textures/tagged_wall.jpg"
+      ]
+      repeatS FALSE
+    }
+    roughness 0.5
+    metalness 0
+  }
+}
+Floor {
+  translation -1.5 0 0.001
+  size 0.3 0.3
+  tileSize 0.2 0.2
+}
